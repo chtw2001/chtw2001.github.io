@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>taekwon's profile</title>
     <!--min => minimalize(요소들을 압축하여 보이는 크기와 용량을 작게 만들어줌)-->
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./animate.css">
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar">
 
@@ -18,7 +20,7 @@
         <nav class="navbar navbar-expand-lg fixed-top bg-dark">
             <div class="container">
               <a class="navbar-brand text-white" href="/">Taekwon Chung</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,15 +40,15 @@
           </nav>
     </header>
     <!-- 상단 프로필 -->
-    <section class="bg-light py-4 mt-4 border-bottom">
+    <section class="bg-light py-4 mt-4 border-bottom profile">
         <div class="container pt-3">
             <!-- 개발을 할 때에는 일반 사용자 관점에서 보아라 -->
-            <div class="d-inline-block">
-                <img class="rounded-circle" height="250" src="pic/KakaoTalk_20230118_215005960_10.jpg" alt="profil image">
+            <div class="d-md-inline-block text-center">
+                <img data-wow-iteration="1" data-wow-duration="1s" data-wow-delay="0.1s" class="rounded-circle wow bounceInUp" height="250" src="pic/KakaoTalk_20230118_215005960_10.jpg" alt="profil image">
             </div>
-            <div class="d-inline-block align-middle mx-3">
-                <h1 class="fw-bold mb-0">Taekwon Chung</h1>
-                <h2 class="fw-light mb-0">Sungkyul university</h2>
+            <div class="d-md-inline-block align-middle mx-3">
+                <h1 class="fw-bold mb-0 text-md-start text-center">Taekwon Chung</h1>
+                <h2 class="fw-light mb-0 text-md-start text-center">Sungkyul university</h2>
                 <h3 class="fw-light mb-0">안녕하세요 멋쨍이사자처럼 대학 11기 운영진 정택원입니다.</h3>
                 <span class="badge text-bg-primary">성결대</span>
                 <span class="badge text-bg-secondary">멋사 11기 출격</span>
@@ -61,7 +63,7 @@
     <div id="likelion"></div>
     </section>
     <!-- 게시물 -->
-    <section class="bg-dark py-4">
+    <section class="bg-dark py-4 likelion">
         <!-- col-md는 항상 row아래에 있어야 함. 여러개 겹쳐서 쓰면 반응형으로 사용 가능 -->
         <!-- img-fluid => 모바일에서 너비를 맞추어줌 -->
         <!-- <img class="img-fluid" src="http://placeimg.com/768/256/animals" alt="동물 사진">
@@ -71,13 +73,13 @@
             <img class="mb-3" src="pic/성결대 로고_배경만 투명.png" alt="멋쟁이사자처럼 성결대 로고" height="150">
             <h3>멋쟁이사자처럼 대학 11기 성결대 운영진</h3>
             <p>멋쟁이사저처럼 대학은 테크 기반의 아이디어 실현을 위한 전국 최대 규모의 대학 연합 창업 동아리입니다.
-                <br>23년 멋쟁이사자처럼 대학 11기 성결대 신규등록을 주도하며 운영진을 모집했습니다.
-                <br>신규등록 완료 후 멋쟁이사자처럼 대학 11기 운영진으로서 활동하고 있습니다.
+                <br class="d-md-none d-lg-block">23년 멋쟁이사자처럼 대학 11기 성결대 신규등록을 주도하며 운영진을 모집했습니다.
+                <br class="d-md-none d-lg-block">신규등록 완료 후 멋쟁이사자처럼 대학 11기 운영진으로서 활동하고 있습니다.
             </p>
         </div>
     </section>
     <div id="activity"></div>
-    <section class="pt-3 mt-5 pb-1">
+    <section class="pt-3 mt-5 pb-1 activity">
         <div class="container">
             <div class="row d-flex align-items-center">
                 <div class="col-md-6 text-center">
@@ -130,7 +132,7 @@
         </div>
     </section>
     <div id="contents"></div>
-    <section class="pt-3 mt-5 pb-1 container">
+    <section class="pt-3 mt-5 pb-1 container contents">
         <div class="container">
             <h3 class="fw-blod text-center">게시물</h3>
             <div class="row row-cols-1 row-cols-md-4 g-4 py-4 px-3">
@@ -216,6 +218,10 @@
             toast.show()
         })
         }
+    </script>
+    <script src="./wow.min.js"></script>
+    <script>
+        new WOW().init();
     </script>
 </body>
 </html>

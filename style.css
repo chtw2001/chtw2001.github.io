@@ -1,0 +1,19 @@
+@media (max-width: 767.98px){
+    .profile div > h3{
+        font-size: 20px !important;
+        word-break: keep-all;
+        text-align: center;
+    }
+    .likelion > div > p{
+        word-break: keep-all;
+    }
+    .likelion > div > p > br{
+        display: none;
+    }
+    .activity div > p{
+        word-break: keep-all;
+    }
+    .activity div > p > br{
+        display: none;
+    }
+}
